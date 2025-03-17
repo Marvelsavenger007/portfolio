@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 import Contact from "./contact/Contact";
 import Projects from "./Projects";
+import Animation from "./Animation";
 
     const ProgressBar = ({ skill, percentage }) => {
         const [isVisible, setIsVisible] = useState(false);
@@ -33,6 +34,7 @@ const Portfolio = () => {
     const text = "I AM A WEB DEVELOPER";
     const [isVisible, setIsVisible] = useState(false);
     const textRef = useRef(null);
+    Animation();
   
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -49,6 +51,16 @@ const Portfolio = () => {
   
       return () => observer.disconnect(); // Cleanup observer
     }, []);
+
+    
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "resume.pd"; // Ensure the resume is in the public folder
+    link.download = "My_Resume.pdf"; // Sets the download file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div>        
@@ -142,7 +154,7 @@ const Portfolio = () => {
                     exceed expectations and set new standards for quality and innovation.
                 </h3>
             </section>
-            <div className="skills">
+            <section className="skills">
                 <h1 className="about-text">Skills</h1>
                 <p>
                     I excel in <span>HTML, CSS, and JavaScript</span>, crafting responsive designs 
@@ -156,7 +168,7 @@ const Portfolio = () => {
                     <ProgressBar skill="HTML" percentage={100} />
                     <ProgressBar skill="Tailwind CSS" percentage={60} />
                 </div>
-            </div>
+            </section>
 
 
             <section id="resume">
@@ -256,6 +268,9 @@ const Portfolio = () => {
                         </div>
                     </div>
                     </div>
+                    <button className="download-btn" onClick={handleDownload}>
+                        Download Resume
+                    </button>
                 </section>
                 </div>
                 
@@ -278,7 +293,7 @@ const Portfolio = () => {
                 <Contact />
 
             </section>
-
+            {/* <Footer />   */}
         </div>
     </div>
   )

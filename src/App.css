@@ -25,6 +25,8 @@
     color: white;
     height: 100vh;
     background-image: url(images/foliobg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 25% 10%;
 }
 
@@ -323,6 +325,36 @@
     font-family: "Roboto", sans-serif;
 }
 
+.download-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    margin-left: 40%;
+    transition: background 0.3s ease-in-out;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.download-btn:hover {
+    background: darkblue;
+}
+
+
 /* Portfolio Section */
 
 #projects{
@@ -490,6 +522,14 @@
         padding: 5%;
         margin: 2rem 0;
     }
+
+    .download-btn{
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        width: 150px;
+        margin-left: 30%;
+        margin-bottom: 2rem;
+    }   
 
 
 }
