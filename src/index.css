@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Hide scrollbar but allow scrolling */
+body {
+    overflow: hidden;
+  }
+  
+  /* Hide scrollbar but allow scrolling (for specific elements) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  

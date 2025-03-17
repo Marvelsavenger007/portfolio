@@ -1,0 +1,495 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.portfolio-container {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+    flex: 1;
+    padding: 0;
+    overflow-y: scroll;
+    width: 85vw;
+    height: 100vh;
+}
+
+#home{
+    color: white;
+    height: 100vh;
+    background-image: url(images/foliobg.jpg);
+    padding: 25% 10%;
+}
+
+#home > h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+.animated-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-text > span {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.animated-text.visible > span {
+    animation: fadeIn 0.5s forwards;
+}
+
+.animated-text .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #00ff00;
+    transform-origin: left;
+}
+
+.animated-text.visible .underline {
+    animation: underlineGrow 0.5s forwards;
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+@keyframes underlineGrow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+ 
+#about{
+    padding: 5% 10%;
+}
+
+.about-text{
+    text-decoration: underline;
+    text-decoration-thickness: 3px; /* Adjust thickness */
+    text-underline-offset: 15px; /* Space between text and underline */
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    font-family: 'Baloo Paaji 2', sans-serif;    
+}
+
+#about > p{
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    line-height: 29px;
+    color: black;
+}
+
+#about > p > span{
+    font-weight: 500;
+    color: #040b14;
+}
+
+.skills-section {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.progress-container {
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.skill-title {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 18px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00c3ff);
+    color: white;
+    font-size: 0.7rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+    width: 0; /* Initial width */
+    transition: width 1.5s ease-in-out;
+}
+
+.animate {
+    width: var(--progress-width, 100%);
+}
+
+.skills{
+    padding: 5% 10%;    
+    background-color: #f4fafd;
+}
+
+.skills-bar{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 10px; /* Space between items */
+}
+
+.about-props{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 5% 0;
+}
+
+.about-details{
+    padding: 0 4%;
+}
+
+.about-details > h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #040b14;
+    font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+#about > h3{
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 29px;
+    color: #040b14;
+    font-style: italic;
+    font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+.about-me{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 10px; /* Space between items */
+    margin: 5% 0;
+}
+
+.about-me-item{
+    align-items: center;
+    display: flex;
+}
+
+.about-me-item > h2{
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+.about-me-span{
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    color: #040b14;
+}
+
+.icon-style {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    color: #007bff;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+/* Resume Section */
+
+#resume{
+    padding: 5% 10%;    
+}
+
+.resume-section > h2 {
+    /* border-bottom: 2px solid #007bff; */
+    margin-bottom: 1%;
+    color: #050d18;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Baloo Paaji 2', sans-serif;
+
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    /* border-left: 2px solid #007bff; */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4%;
+    padding-left: 20px;
+}
+
+.timeline-item .circle {
+    position: absolute;
+    /* left: -10px  ; */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.timeline-item .content {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
+}
+
+.content > h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+.content > span {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #555;
+}
+
+.content > p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+}
+
+.content > ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.content > ul > li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 1% 0;
+    list-style-type: disc;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Portfolio Section */
+
+#projects{
+    background-color: #f4fafd;
+    padding: 5% 10%;
+}
+
+
+/* Contact Section */
+#contact{
+    padding: 5% 10%;    
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    *{
+        overflow: scroll;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        width: 100%;
+        overflow: scroll;
+        margin-top: -14vw;
+    }
+
+   
+
+    .main-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-top: 60px;
+    }
+
+    #home{
+        height: 70vh;
+        padding: 55% 5%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #home > h1{
+        font-size: 1.5rem;
+    }
+
+    .animated-text {
+        font-size: 1.5rem;
+    }
+    
+    .skills{
+        grid-template-columns: 1fr; /* Change to 1 column */
+    }
+
+    #about{
+        margin: 3rem 0;
+        padding: 5% 5%;
+    }
+
+    .about-text{
+        font-size: 1.8rem;
+    }
+
+    .about-text > p{
+        font-size: 0.9rem;
+    }
+
+    .about-props{
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .about-img > img{
+        width: 100%;
+    }
+
+    .about-details{
+        padding: 0;
+    }
+
+    .about-details > h2{
+        font-size: 1.8rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    #about-details > h3{
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills{
+        padding: 5% 5%;
+    }
+
+    .skills > p{
+        font-size: 1rem;
+    }
+
+    .skills-bar{
+        margin: 1rem 0;
+        grid-template-columns: 1fr; 
+    }
+
+    .skill-title{
+        font-size: 0.9rem;
+        font-weight: 5  00;
+    }
+
+    .progress-container{
+        margin: 5px 0;
+    }
+
+    .progress-bar{
+        height: 15px;
+    }
+
+    .progress-fill{
+        font-size: 0.6rem;
+        line-height: 15px;
+    }
+
+    #resume{
+        padding: 5% 5%;
+    }
+
+    #resume > p{
+        font-size: 0.95rem;
+    }
+
+    .resume-section > h2{
+        font-size: 1.5rem;
+    }
+
+    .timeline{
+        margin: 0;
+        padding: 0;
+        /* margin-left: -10%; */
+        width: 90vw;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-item {
+        padding: 10px;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item{
+        width: 100%;
+        margin: 0;
+    }
+
+    .content{
+        background-color: #007bff;
+    }
+
+    #contact{
+        padding: 5%;
+        margin: 2rem 0;
+    }
+
+
+}
