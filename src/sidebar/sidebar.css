@@ -44,22 +44,19 @@
     font-size: 18px;
     transition: color 0.3s ease-in-out;
     text-align: left;
-    /* margin-left: -50%; */
+
 }
 
-/* Hover Effect: Icons turn blue */
 .sidebar ul li a:hover,
 .sidebar ul li a:hover svg {
-    color: #007bff; /* Blue color */
+    color: #007bff;
 }
 
-/* Active Link Effect */
 .sidebar ul li a.active,
 .sidebar ul li a.active svg {
-    color: #007bff; /* Blue color for active state */
+    color: #007bff;
 }
 
-/* Ensure icons and text are aligned properly */
 .sidebar ul li svg {
     font-size: 20px;
     transition: color 0.3s ease-in-out;
@@ -74,13 +71,13 @@
 
 .social-links a {
     font-size: 24px;
-    color: #c0b1b1; /* Default color */
+    color: #c0b1b1;
     transition: color 0.3s ease-in-out;
     margin: 2rem 0;
 }
 
 .social-links > a:hover {
-    color: #007bff; /* Blue on hover */
+    color: #007bff;
 }
 
 @media (max-width: 768px){
@@ -102,7 +99,7 @@
         left: 0;
     }
 
-    /* Show menu button only on small screens */
+
     .menu-btn {
         display: block;
         position: absolute;
@@ -121,7 +118,7 @@
         border-radius: 50%;
     }
     
-    /* Change background to blue and icon to white when active */
+
     .menu-btn.active {
         background: #2e7ed3;
         color: white;
@@ -131,6 +128,7 @@
         width: 90vw;
     }
 
+  
     .sidebar ul{
         width: 90vw;
         margin: 1rem auto;
@@ -139,8 +137,15 @@
     .sidebar ul li{
         margin: 1rem 0;
     }
+}
 
-   
 
+@media (min-width: 769px ) and (max-width:1024px){
+    .sidebar{
+        width: 25vw;
+    }
 
+    .social-links svg{
+        font-size: 16px;
+    }
 }

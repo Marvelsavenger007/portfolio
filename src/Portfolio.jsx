@@ -5,6 +5,7 @@ import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 import Contact from "./contact/Contact";
 import Projects from "./Projects";
 import Animation from "./Animation";
+import Footer from "./footer/footer";
 
     const ProgressBar = ({ skill, percentage }) => {
         const [isVisible, setIsVisible] = useState(false);
@@ -103,16 +104,6 @@ const Portfolio = () => {
                     <div className="about-details">
                         <h2>Web Developer</h2> 
                         <div className="about-me">
-                            <div className="about-me-item">
-                                <span><FontAwesomeIcon icon={faGreaterThan} className="icon-style" /></span>
-                                <h2>Birthday:</h2>
-                                <span className="about-me-span"> 6 January</span>
-                            </div>
-                            <div className="about-me-item">
-                                <span><FontAwesomeIcon icon={faGreaterThan} className="icon-style" /></span>
-                                <h2>Age:</h2>
-                                <span className="about-me-span"> 24</span>
-                            </div>
                             <div className="about-me-item">
                                 <span><FontAwesomeIcon icon={faGreaterThan} className="icon-style" /></span>
                                 <h2>Degree:</h2>
@@ -293,7 +284,7 @@ const Portfolio = () => {
                 <Contact />
 
             </section>
-            {/* <Footer />   */}
+            <Footer />  
         </div>
     </div>
   )
