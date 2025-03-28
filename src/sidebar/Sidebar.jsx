@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import profile from "../images/profilepic.jpg";
+import profile from "../images/profilepic1.jpg";
 import './sidebar.css'
 import { FaHome, FaUser, FaProjectDiagram, FaFileAlt,  FaEnvelope, FaTwitter, FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
