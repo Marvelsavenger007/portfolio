@@ -24,7 +24,7 @@
 #home{
     color: white;
     height: 100vh;
-    background-image: url(images/foliobg.jpg);
+    background-image: url(images/foliobg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25% 10%;
@@ -517,7 +517,7 @@ section.show {
     .content{
         background-color: #007bff;
     }
-
+b
     #contact{
         padding: 5%;
         margin: 2rem 0;
